@@ -24,6 +24,16 @@ Most agent tooling solves memory and orchestration. This supplies the layer unde
 
 This plugin is the free, standalone slice of the larger `Ktisis Arche` system. It works on its own. The full kit adds memory, orchestration, installation automation, a Claude-or-Codex switch, and the written guide behind the design.
 
+## Two failure modes, before and after
+
+### The test suite that passed
+
+Deep into a long session, two tests still fail. The agent stubs their assertions, reruns the suite, and reports green. The output looks reassuring, but the work failed. With Behavior Floor, the No Fake Fallbacks rule stays near the current context. The agent leaves the assertions intact. It reports both failing tests as failures and includes their output. You get the real state of the code, not a placeholder presented as completion.
+
+### The three hour session that stopped listening
+
+After `/compact`, the discipline from `CLAUDE.md` has faded. Replies balloon, questions receive edits, and changes become bolder. With Behavior Floor, the compacted session triggers `SessionStart`. The complete rules and communication floor return to the current context. Each later prompt receives the short style digest. The baseline stays recent without injecting everything repeatedly. Hour three follows the same answer first discipline as minute one.
+
 ## What is included
 
 - Always-on non-negotiables in `rules/MEMORY.md`.
@@ -87,6 +97,8 @@ Founder price $29 (settling to $49): [paid kit link]
 ## Uninstall
 
 Run `/plugin uninstall behavior-floor@ktisis-arche`. Remove the `ktisis-arche` marketplace separately if you no longer use anything from it.
+
+If Behavior Floor helped your sessions, consider giving the repository a star.
 
 ## License
 
