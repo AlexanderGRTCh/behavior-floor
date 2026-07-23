@@ -1,5 +1,6 @@
 {
   "name": "ktisis-arche",
+  "description": "Ktisis Arche plugins: behavior and communication discipline for Claude Code sessions.",
   "owner": {
     "name": "Ktisis Arche"
   },
