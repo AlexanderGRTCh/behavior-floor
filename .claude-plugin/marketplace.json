@@ -1,0 +1,20 @@
+{
+  "name": "ktisis-arche",
+  "owner": {
+    "name": "Ktisis Arche"
+  },
+  "plugins": [
+    {
+      "name": "behavior-floor",
+      "source": "./",
+      "description": "An always-on behavior and communication rules floor for coherent Claude Code sessions.",
+      "category": "workflow",
+      "tags": [
+        "behavior",
+        "rules",
+        "communication",
+        "workflow"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_PLUGIN_ROOT}/hooks/inject_floor.py\" session-start || python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/inject_floor.py\" session-start || py -3 \"${CLAUDE_PLUGIN_ROOT}/hooks/inject_floor.py\" session-start",
+            "timeout": 10,
+            "statusMessage": "Loading behavior floor..."
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_PLUGIN_ROOT}/hooks/inject_floor.py\" digest || python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/inject_floor.py\" digest || py -3 \"${CLAUDE_PLUGIN_ROOT}/hooks/inject_floor.py\" digest",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

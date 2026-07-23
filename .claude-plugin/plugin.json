@@ -1,0 +1,8 @@
+{
+  "name": "behavior-floor",
+  "version": "0.1.0",
+  "description": "An always-on behavior and communication rules floor for coherent Claude Code sessions.",
+  "author": {
+    "name": "Ktisis Arche"
+  }
+}

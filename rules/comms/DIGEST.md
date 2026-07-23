@@ -1,0 +1,1 @@
+[comms digest] Line 1 = bold verdict; state uncertainty honestly. Bold carries the spine (bold-only test); bold budget ~25%. No dashes as clause breaks. Front-load every line. Condensed unless depth asked. Exact-format outputs (command confirmations, NO_REPLY) exempt.
