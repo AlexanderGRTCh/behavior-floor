@@ -2,6 +2,10 @@
 
 **Your instructions, actually enforced. A free rules floor for Claude Code that survives long sessions and compaction.**
 
+Works on **Windows, macOS, and Linux** (all three verified). Requires Claude Code and Python 3.7+; standard library only, no API key, no network calls.
+
+![Behavior Floor demo: rules injected at session start](assets/demo.gif)
+
 ## Why this exists
 
 A `CLAUDE.md` degrades. As context grows the model attends to it less; after `/compact` it fades further; by hour two the agent is padding answers, inventing fallbacks, and deleting things you never approved. The fix is not better prose, it is re-injection: this plugin hooks `SessionStart` to reload the full rules floor every session (fresh, resumed, or compacted) and injects a one-line style digest at every prompt, so the discipline sits at recency instead of dying at the top of the context.
@@ -61,6 +65,16 @@ The free plugin includes the rules floor, communication doctrine, delegation doc
 The guide is the reason it costs money. The files are the demo; the reasoning is the product.
 
 Founder price $29 (settling to $49): [paid kit link]
+
+## FAQ
+
+**Does it conflict with my CLAUDE.md?** No. Your CLAUDE.md still loads normally; the floor layers under it and, unlike a CLAUDE.md, gets re-asserted at every session start and every prompt, so it keeps working after compaction.
+
+**What does it cost in tokens?** Roughly 2k once per session plus about 60 per prompt. The answer-first and condensation rules typically save more output tokens than that.
+
+**Does it send my data anywhere?** No. Zero network calls; one standard-library Python script and plain-text rules you can audit in five minutes.
+
+**How do I get rid of it?** One command: `/plugin uninstall behavior-floor@ktisis-arche`. Your system is back to exactly what it was.
 
 ## Uninstall
 
