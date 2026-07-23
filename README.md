@@ -6,6 +6,14 @@ Works on **Windows, macOS, and Linux** (all three verified). Requires Claude Cod
 
 ![Behavior Floor demo: rules injected at session start](assets/demo.gif)
 
+## What actually changes
+
+Three everyday scenarios, before and after the floor:
+
+- **You ask "why is this failing?"** Without: the agent starts editing files. With: you get an answer and nothing gets touched; action waits for an instruction.
+- **A task fails.** Without: mockups or placeholder output dressed up as success. With: failure reported as failure, then it stops.
+- **The agent decides a file is stale.** Without: hard delete, gone. With: everything moves to a dated `.trash/` folder that only you empty.
+
 ## Why this exists
 
 A `CLAUDE.md` degrades. As context grows the model attends to it less; after `/compact` it fades further; by hour two the agent is padding answers, inventing fallbacks, and deleting things you never approved. The fix is not better prose, it is re-injection: this plugin hooks `SessionStart` to reload the full rules floor every session (fresh, resumed, or compacted) and injects a one-line style digest at every prompt, so the discipline sits at recency instead of dying at the top of the context.
